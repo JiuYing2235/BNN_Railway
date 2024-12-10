@@ -9,9 +9,9 @@
 #include <chrono>
 
 using namespace std;
-const uint64 m1 = 6148914691236517205;   // 二进制：0x5555555555555555 提取偶数位
-const uint64 m2 = 3689348814741910323;   // 二进制：0x3333333333333333 提取后两位
-const uint64 m4 = 1085102592571150095;   // 二进制：0x0f0f0f0f0f0f0f0f 提取每八位的低4位
+const uint64 m1 = 6148914691236517205;
+const uint64 m2 = 3689348814741910323;
+const uint64 m4 = 1085102592571150095;
 
 inline uint8 compute_engine_64(uint64 b, uint64 w)
 {
@@ -87,7 +87,7 @@ void binary_conv3x3_tile(
 			for (int channel_pt=0; channel_pt<OUT_CHANNEL_PARALLELISM; channel_pt++) {
 				int16 msb_accumulation = 0;
 				// Compute each output channel
-                if (switch_on || (msb_scale*comparator[channel_pt][row][col]>threshold[channel_pt])){ //comparator？？
+                if (switch_on || (msb_scale*comparator[channel_pt][row][col]>threshold[channel_pt])){ //comparator锛燂紵
 				for (int k_row=0; k_row<3; k_row++) {
 					for (int k_col=0; k_col<3; k_col++) {
 						int row_idx_pad = row - 2 + k_row;
