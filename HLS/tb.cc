@@ -168,7 +168,6 @@ int main(int argc, char **argv)
 			correct_hw ++;
 		}
 
-		cout << "Hardware has "<< correct_hw << "/" << k + 1 << " correct." << endl;
 		cout << "\n" << endl;
 #endif
 
